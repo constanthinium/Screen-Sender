@@ -1,0 +1,25 @@
+﻿<Window x:Class="Screen_Sender.InputDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Screen_Sender"
+        mc:Ignorable="d"
+        Title="InputDialog" Height="Auto" Width="320"
+        ResizeMode="NoResize" SizeToContent="Height" WindowStyle="ToolWindow"
+        FocusManager.FocusedElement="{Binding ElementName=textBox}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <TextBlock Name="textBlock" Text="Message" Margin="4"/>
+        <TextBox Name="textBox" Grid.Row="1" Margin="8" TabIndex="0" KeyDown="TextBox_KeyDown" />
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="2" Margin="8">
+            <Button Name="okButton" Content="OK" Width="80" />
+            <Separator Background="Transparent" Width="16" />
+            <Button Name="cancelButton" Content="Cancel" Width="80" />
+        </StackPanel>
+    </Grid>
+</Window>

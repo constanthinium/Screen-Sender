@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screen Sender", "Screen Sender\Screen Sender.csproj", "{F791B2DD-E43F-467A-B193-E0BC6F92CE6E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F791B2DD-E43F-467A-B193-E0BC6F92CE6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F791B2DD-E43F-467A-B193-E0BC6F92CE6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F791B2DD-E43F-467A-B193-E0BC6F92CE6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F791B2DD-E43F-467A-B193-E0BC6F92CE6E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C8F6957-0625-477C-980F-FAAAC9ACBA21}
+	EndGlobalSection
+EndGlobal

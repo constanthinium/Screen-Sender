@@ -1,0 +1,55 @@
+﻿<Page x:Class="Screen_Sender.SenderPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Screen_Sender"
+      mc:Ignorable="d"
+      d:DesignHeight="480" d:DesignWidth="640"
+      Title="SenderPage" Background="White">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid Margin="8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <TextBlock Text="Bitmap backscale: " />
+            <Slider Name="scaleSlider"
+                    Thumb.DragCompleted="ScaleSlider_DragCompleted"
+                    Minimum="1"
+                    Maximum="4"
+                    Value="4"
+                    AutoToolTipPlacement="BottomRight"
+                    IsSnapToTickEnabled="True"
+                    TickPlacement="BottomRight"
+                    Grid.Column="1" />
+            <TextBlock Text="Send Interval: " Grid.Row="1" />
+            <Slider Name="intervalSlider"
+                    Thumb.DragCompleted="IntervalSlider_DragCompleted"
+                    Minimum="0.5"
+                    Maximum="5"
+                    Value="1"
+                    TickFrequency="0.5"
+                    AutoToolTipPlacement="BottomRight"
+                    IsSnapToTickEnabled="True"
+                    TickPlacement="BottomRight"
+                    Grid.Column="1"
+                    Grid.Row="1"/>
+
+        </Grid>
+        <TextBox Name="logTextBox"
+                 Grid.Row="1"
+                 IsReadOnly="True"
+                 FontFamily="Consolas"
+                 VerticalScrollBarVisibility="Auto" />
+    </Grid>
+</Page>
