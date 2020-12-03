@@ -2,6 +2,7 @@
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -14,7 +15,7 @@ namespace Screen_Sender
         {
             InitializeComponent();
 
-            UdpClient server = new UdpClient(new IPEndPoint(IPAddress.Any, 80));
+            UdpClient server = new UdpClient(new IPEndPoint(IPAddress.Any, (int)Application.Current.Properties["port"]));
             IPEndPoint client = new IPEndPoint(IPAddress.Any, 0);
             BackgroundWorker backgroundWorker = new BackgroundWorker();
             backgroundWorker.DoWork += delegate

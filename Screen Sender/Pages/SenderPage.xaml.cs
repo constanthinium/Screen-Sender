@@ -5,26 +5,27 @@ using System.Net;
 using System.Net.Sockets;
 using System.Windows.Controls;
 using System.Windows.Threading;
+using System.Windows;
 
 namespace Screen_Sender
 {
     public partial class SenderPage : Page
     {
-        DispatcherTimer dispatcherTimer;
+        readonly DispatcherTimer dispatcherTimer;
 
         public SenderPage(string address)
         {
             InitializeComponent();
 
             ImageConverter converter = new ImageConverter();
-            const int port = 80;
 
             IPAddress ipAddress = address.Length != 0 ? IPAddress.Parse(address) : IPAddress.Loopback;
             UdpClient client = new UdpClient();
+            int port = (int)Application.Current.Properties["port"];
             client.Connect(ipAddress, port);
             Log($"connected to {ipAddress}:{port}");
 
-            Size screenSize = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Size;
+            var screenSize = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Size;
             Bitmap bitmap = new Bitmap(screenSize.Width, screenSize.Height);
             Graphics graphics = Graphics.FromImage(bitmap);
 
