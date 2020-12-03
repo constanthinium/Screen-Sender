@@ -8,7 +8,7 @@
       d:DesignHeight="480" d:DesignWidth="640"
       Title="ReceiverPage">
 
-    <Grid>
+    <Grid Background="Black">
         <Image Name="image" />
     </Grid>
 </Page>

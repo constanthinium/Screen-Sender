@@ -17,10 +17,12 @@ namespace Screen_Sender
             InitializeComponent();
 
             ImageConverter converter = new ImageConverter();
+            const int port = 80;
 
             IPAddress ipAddress = address.Length != 0 ? IPAddress.Parse(address) : IPAddress.Loopback;
             UdpClient client = new UdpClient();
-            client.Connect(ipAddress, 80);
+            client.Connect(ipAddress, port);
+            Log($"connected to {ipAddress}:{port}");
 
             Size screenSize = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Size;
             Bitmap bitmap = new Bitmap(screenSize.Width, screenSize.Height);
