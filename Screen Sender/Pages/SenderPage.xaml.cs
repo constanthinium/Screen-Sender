@@ -58,17 +58,17 @@ namespace Screen_Sender
             }
         }
 
-        private void ScaleSlider_DragCompleted(object sender, DragCompletedEventArgs e)
+        private void ScaleSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            Log("backscale: " + intervalSlider.Value);
+            Log("backscale: " + e.NewValue);
         }
 
-        private void IntervalSlider_DragCompleted(object sender, DragCompletedEventArgs e)
+        private void IntervalSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             if (dispatcherTimer != null)
             {
-                dispatcherTimer.Interval = TimeSpan.FromSeconds(intervalSlider.Value);
-                Log("interval: " + intervalSlider.Value);
+                dispatcherTimer.Interval = TimeSpan.FromSeconds(e.NewValue);
+                Log("interval: " + e.NewValue);
             }
         }
     }
