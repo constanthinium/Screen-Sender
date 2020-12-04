@@ -19,10 +19,6 @@
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition />
-                <RowDefinition />
-            </Grid.RowDefinitions>
             <TextBlock Text="Bitmap backscale: " />
             <Slider Name="scaleSlider"
                     ValueChanged="ScaleSlider_ValueChanged"
@@ -33,21 +29,7 @@
                     IsSnapToTickEnabled="True"
                     TickPlacement="BottomRight"
                     Grid.Column="1" />
-            <TextBlock Text="Send Interval: "
-                       Grid.Row="1" />
-            <Slider Name="intervalSlider"
-                    ValueChanged="IntervalSlider_ValueChanged"
-                    Minimum="0.5"
-                    Maximum="5"
-                    Value="1"
-                    TickFrequency="0.5"
-                    AutoToolTipPlacement="BottomRight"
-                    IsSnapToTickEnabled="True"
-                    TickPlacement="BottomRight"
-                    Grid.Column="1"
-                    Grid.Row="1" />
         </Grid>
-        
         <TextBox Name="logTextBox"
                  Grid.Row="1"
                  IsReadOnly="True"
